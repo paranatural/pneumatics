@@ -1,0 +1,34 @@
+{
+  "name": "@pneumatics/rest",
+  "description": "REST server for Pneumatics (file-driven database server)",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Anton Medvedev",
+    "email": "unordinarity@yandex.ru",
+    "url": "https://github.com/unordinarity"
+  },
+  "keywords": [
+    "graphql",
+    "json",
+    "markdown",
+    "yaml",
+    "content",
+    "documentation",
+    "blog",
+    "jamstack"
+  ],
+  "type": "module",
+  "scripts": {
+
+  },
+  "peerDependencies": {
+
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}

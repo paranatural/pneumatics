@@ -1,0 +1,63 @@
+{
+  "name": "@pneumatics/pneumatics",
+  "description": "File-driven database server",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Anton Medvedev",
+    "email": "unordinarity@yandex.ru",
+    "url": "https://github.com/unordinarity"
+  },
+  "keywords": [
+    "json",
+    "markdown",
+    "yaml",
+    "content",
+    "documentation",
+    "blog",
+    "jamstack"
+  ],
+  "type": "module",
+  "scripts": {
+    "develop": "exit 0",
+    "format": "exit 0",
+    "lint": "exit 0",
+    "typecheck": "tsc --noEmit",
+    "test": "exit 0",
+    "build": "rollup -c rollup.config.js",
+    "serve": "exit 0",
+    "clean": "rimraf bin"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^2.3.0",
+    "async": "^3.2.4",
+    "chokidar": "^3.5.3",
+    "cross-env": "^7.0.3",
+    "effector": "^22.7.0",
+    "istextorbinary": "^6.0.0",
+    "just-group-by": "^2.2.0",
+    "nanoid": "^5.0.2",
+    "patronum": "^1.16.0",
+    "pkg-dir": "^7.0.0",
+    "read-pkg-up": "^9.1.0",
+    "rehype-stringify": "^10.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.0.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "unified": "^11.0.3",
+    "winston": "^3.8.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@rollup/plugin-url": "^8.0.1",
+    "@types/async": "^3.2.18",
+    "@types/node": "^18.15.10",
+    "rimraf": "^5.0.0",
+    "rollup": "^3.20.2",
+    "type-fest": "^3.7.1",
+    "typescript": "^5.2.2"
+  }
+}
