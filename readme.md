@@ -1,12 +1,17 @@
 <div align='center'>
-    <img src='.github/logo.png' />
+    <picture>
+        <source media='(prefers-color-scheme: dark)' srcset='./.github/pneumatics-logo-light-160.png' />
+        <source media='(prefers-color-scheme: light)' srcset='./.github/pneumatics-logo-dark-160.png' />
+        <img src='./.github/pneumatics-logo-dark-160.png' />
+    </picture>
     <h1>⬡ Pneumatics</h1>
 </div>
 
 ![Tests: no](https://img.shields.io/badge/tests-no-red?style=flat-square)
 ![Coverage: 146%](https://img.shields.io/badge/coverage-146%25-green?style=flat-square)
 ![Build: sometimes](https://img.shields.io/badge/build-sometimes-yellow?style=flat-square)
-[![GitHub license](https://img.shields.io/github/license/unordinarity/panopticon?style=flat-square)](./docs/license)
+[![NPM bundle size](https://img.shields.io/bundlephobia/minzip/pneumatics/pneumatics)](https://bundlephobia.com/result?p=@pneumatics/pneumatics)
+[![GitHub license](https://img.shields.io/github/license/paranatural/panopticon?style=flat-square)](./docs/license)
 [![Malotru code style](https://img.shields.io/badge/Code_style-Malotru-red?style=flat-square)](https://github.com/unordinarity/malotru)
 [![TypeScript support](https://img.shields.io/badge/TypeScript-out--of--box-blue?style=flat-square)](https://www.typescriptlang.org/)
 
@@ -16,53 +21,41 @@ File-driven headless CMS
 
 Pneumatics API works/feels like any other headless CMS, but doesn't force/lead you to install bloated packages and work/seek in bloated interfaces. Just plain files.
 
-# ⬡ Installation/Usage/API
+# ⬡ Features
 
-## Directly in code
-
-```shell
-yarn add @pneumatics/pneumatics
-```
+# ⬡ Installation
 
 ```shell
 npm i @pneumatics/pneumatics
 ```
 
 ```shell
+yarn add @pneumatics/pneumatics
+```
+
+```shell
 pnpm add @pneumatics/pneumatics
 ```
 
-## With GraphQL
+# ⬡ Usage/Utilizing/Enjoyment
 
-```shell
-yarn add @pneumatics/pneumatics @pneumatics/graphql
+```typescript
+
 ```
 
-```shell
-npm i @pneumatics/pneumatics @pneumatics/graphql
-```
+# ⬡ API
 
-```shell
-pnpm add @pneumatics/pneumatics @pneumatics/graphql
-```
-
-## With REST API
-
-```shell
-yarn add @pneumatics/pneumatics @pneumatics/rest
-```
-
-```shell
-npm i @pneumatics/pneumatics @pneumatics/rest
-```
-
-```shell
-pnpm add @pneumatics/pneumatics @pneumatics/rest
-```
+To use Pneumatics as JS packages, check [@pneumatics/pneumatics docs](./packages/pneumatics/readme.md)
 
 # ⬡ Contribution
 
 Feel free to open an issue/discussion with request/report, but ensure you read/follow [Contributor Covenant Code of Conduct](./docs/code_of_conduct.md)
+
+# ⬡ Development/History
+
+[Changelog/Past/Versions](./docs/changelog.md)
+
+[Roadmap/Future](./docs/roadmap.md)
 
 # ⬡ Legal info
 
