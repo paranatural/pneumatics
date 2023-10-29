@@ -2,12 +2,10 @@ import { createServer } from 'node:http'
 import { createYoga } from 'graphql-yoga'
 import { renderGraphiQL } from '@graphql-yoga/render-graphiql'
 
-import { schema } from '../../model/schema'
-import { logger } from '../../shared/logger'
+import { schema } from '../model/schema'
+import { logger } from '../shared/logger'
 
-import { Service } from '../service'
-
-export class Server implements Service {
+export class App {
   private yoga
   private server
 

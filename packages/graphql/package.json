@@ -20,20 +20,36 @@
   ],
   "type": "module",
   "scripts": {
-
+    "build": "",
+    "format": "exit 0",
+    "lint": "exit 0",
+    "typecheck": "tsc --noEmit",
+    "test": "exit 0",
+    "clean": "rimraf dist && rimraf bin"
   },
+  "bin": "bin/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "peerDependencies": {
-
+    "@pneumatics/pneumatics": "^0.0.0",
+    "graphql": "^16.6.0"
   },
   "dependencies": {
-    "@graphql-tools/schema": "^9.0.17",
-    "@graphql-tools/utils": "^9.2.1",
+    "@graphql-tools/schema": "^10.0.0",
+    "@graphql-tools/utils": "^10.0.7",
     "@graphql-yoga/render-graphiql": "^5.0.0",
+    "commander": "^11.1.0",
     "gqtx": "^0.8.1",
-    "graphql": "^16.6.0",
-    "graphql-yoga": "^3.7.3"
+    "graphql-yoga": "^5.0.0",
+    "pino": "^8.16.1",
+    "pino-pretty": "^10.2.3",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-
+    "@pneumatics/pneumatics": "^0.0.0",
+    "@types/node": "^18.18.7",
+    "graphql": "^16.8.1",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
   }
 }

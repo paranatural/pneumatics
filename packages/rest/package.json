@@ -20,15 +20,29 @@
   ],
   "type": "module",
   "scripts": {
-
+    "build": "",
+    "format": "exit 0",
+    "lint": "exit 0",
+    "typecheck": "tsc --noEmit",
+    "test": "exit 0",
+    "clean": "rimraf dist && rimraf bin"
   },
+  "bin": "bin/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "peerDependencies": {
-
+    "@pneumatics/pneumatics": "^0.0.0"
   },
   "dependencies": {
-
+    "commander": "^11.1.0",
+    "pino": "^8.16.1",
+    "pino-pretty": "^10.2.3",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-
+    "@pneumatics/pneumatics": "^0.0.0",
+    "@types/node": "^18.18.7",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
   }
 }
