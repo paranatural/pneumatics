@@ -9,5 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="panopticon" />
+    <orderEntry type="module" module-name="turntable" />
   </component>
 </module>

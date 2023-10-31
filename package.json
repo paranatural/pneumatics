@@ -1,15 +1,22 @@
 {
   "private": true,
   "scripts": {
-
+    "prepare": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@commitlint/format": "^18.1.0",
+    "husky": "^8.0.3",
     "lerna": "^7.4.1",
     "nx": "^17.0.2",
-    "typescript": "^5.2.2"
+    "pinst": "^3.0.0"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ],
   "engines": {
     "node": ">=18.16.0"
