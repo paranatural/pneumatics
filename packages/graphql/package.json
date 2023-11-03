@@ -10,12 +10,15 @@
   },
   "keywords": [
     "graphql",
+    "paranatural",
+    "pneumatics",
     "json",
     "markdown",
     "yaml",
     "content",
     "documentation",
     "blog",
+    "cms",
     "jamstack"
   ],
   "type": "module",
