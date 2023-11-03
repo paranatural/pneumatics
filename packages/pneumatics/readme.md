@@ -1,7 +1,21 @@
-# @pneumatics/pneumatics
+# @paranatural/pneumatics
 
-File-driven database server
+File-driven headless CMS
 
-# Installation
+# ⬡ Installation
 
-# Usage
+```shell
+yarn add @paranatural/pneumatics
+```
+
+```shell
+npm i @paranatural/pneumatics
+```
+
+```shell
+pnpm add @paranatural/pneumatics
+```
+
+# ⬡ Usage
+
+# ⬡ API

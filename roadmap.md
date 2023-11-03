@@ -2,9 +2,9 @@
 
 ## 0.1 (initial release)
 
-- @pneumatics/pneumatics: well-defined API
-- @pneumatics/pneumatics: stable build
-- @pneumatics/pneumatics: stable run on examples
+- @paranatural/pneumatics: well-defined API
+- @paranatural/pneumatics: stable build
+- @paranatural/pneumatics: stable run on examples
 - no typescript errors and warnings
 - fresh dependencies
 

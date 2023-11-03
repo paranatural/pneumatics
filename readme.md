@@ -10,7 +10,7 @@
 ![Tests: no](https://img.shields.io/badge/tests-no-red?style=flat-square)
 ![Coverage: 146%](https://img.shields.io/badge/coverage-146%25-green?style=flat-square)
 ![Build: sometimes](https://img.shields.io/badge/build-sometimes-yellow?style=flat-square)
-[![NPM bundle size](https://img.shields.io/bundlephobia/minzip/pneumatics/pneumatics)](https://bundlephobia.com/result?p=@pneumatics/pneumatics)
+[![NPM bundle size](https://img.shields.io/bundlephobia/minzip/pneumatics/pneumatics)](https://bundlephobia.com/result?p=@paranatural/pneumatics)
 [![GitHub license](https://img.shields.io/github/license/paranatural/pneumatics?style=flat-square)](license.md)
 [![Types support](https://img.shields.io/npm/types/pneumatics/pneumatics?style=flat-square)](https://www.npmjs.com/package/panopticon-core)
 [![Malotru code style](https://img.shields.io/badge/Code_style-Malotru-red?style=flat-square)](https://github.com/unordinarity/malotru)
@@ -26,15 +26,15 @@ Pneumatics API works/feels like any other headless CMS, but doesn't force/lead y
 # ⬡ Installation
 
 ```shell
-npm i @pneumatics/pneumatics
+npm i @paranatural/pneumatics
 ```
 
 ```shell
-yarn add @pneumatics/pneumatics
+yarn add @paranatural/pneumatics
 ```
 
 ```shell
-pnpm add @pneumatics/pneumatics
+pnpm add @paranatural/pneumatics
 ```
 
 # ⬡ Usage/Utilizing/Enjoyment
@@ -45,7 +45,7 @@ pnpm add @pneumatics/pneumatics
 
 # ⬡ API
 
-To use Pneumatics as JS packages, check [@pneumatics/pneumatics docs](./packages/pneumatics/readme.md)
+To use Pneumatics as JS packages, check [@paranatural/pneumatics docs](./packages/pneumatics/readme.md)
 
 # ⬡ Contribution
 

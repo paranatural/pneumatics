@@ -1,7 +1,21 @@
-# @pneumatics/graphql
+# @paranatural/pneumatics-graphql
 
-GraphQL server for Pneumatics (file-driven database server)
+GraphQL server for Pneumatics (file-driven headless CMS)
 
-# Installation
+# ⬡ Installation
 
-# Usage
+```shell
+yarn add @paranatural/pneumatics-graphql
+```
+
+```shell
+npm i @paranatural/pneumatics-graphql
+```
+
+```shell
+pnpm add @paranatural/pneumatics-graphql
+```
+
+# ⬡ Usage
+
+# ⬡ API

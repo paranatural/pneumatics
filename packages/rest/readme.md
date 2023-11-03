@@ -1,7 +1,21 @@
-# @pneumatics/graphql
+# @paranatural/pneumatics-rest
 
-REST server for Pneumatics (file-driven database server)
+REST server for Pneumatics (file-driven headless CMS)
 
-# Installation
+# ⬡ Installation
 
-# Usage
+```shell
+yarn add @paranatural/pneumatics-rest
+```
+
+```shell
+npm i @paranatural/pneumatics-rest
+```
+
+```shell
+pnpm add @paranatural/pneumatics-rest
+```
+
+# ⬡ Usage
+
+# ⬡ API

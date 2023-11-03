@@ -1,6 +1,6 @@
 import { program } from 'commander'
 
-import { Config, configSchema } from '@pneumatics/pneumatics'
+import { Config, configSchema } from '@paranatural/pneumatics'
 
 program.parse()
 
