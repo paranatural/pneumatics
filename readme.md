@@ -4,16 +4,9 @@
         <source media='(prefers-color-scheme: light)' srcset='./.github/pneumatics-logo-dark-160.png' />
         <img src='./.github/pneumatics-logo-dark-160.png' />
     </picture>
-    <h1>⬡ Pneumatics</h1>
 </div>
 
-![Tests: no](https://img.shields.io/badge/tests-no-red?style=flat-square)
-![Coverage: 146%](https://img.shields.io/badge/coverage-146%25-green?style=flat-square)
-![Build: sometimes](https://img.shields.io/badge/build-sometimes-yellow?style=flat-square)
-[![NPM bundle size](https://img.shields.io/bundlephobia/minzip/pneumatics/pneumatics)](https://bundlephobia.com/result?p=@paranatural/pneumatics)
-[![GitHub license](https://img.shields.io/github/license/paranatural/pneumatics?style=flat-square)](license.md)
-[![Types support](https://img.shields.io/npm/types/pneumatics/pneumatics?style=flat-square)](https://www.npmjs.com/package/panopticon-core)
-[![Malotru code style](https://img.shields.io/badge/Code_style-Malotru-red?style=flat-square)](https://github.com/unordinarity/malotru)
+# ⬡ Pneumatics
 
 File-driven headless CMS
 
