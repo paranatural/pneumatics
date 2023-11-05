@@ -44,8 +44,12 @@
   },
   "devDependencies": {
     "@paranatural/pneumatics": "^0.0.0",
+    "@rollup/plugin-typescript": "^11.1.5",
     "@types/node": "^18.18.7",
+    "read-pkg-up": "^11.0.0",
     "rimraf": "^5.0.5",
+    "rollup": "^4.3.0",
+    "rollup-plugin-dts": "^6.1.0",
     "typescript": "^5.2.2"
   }
 }

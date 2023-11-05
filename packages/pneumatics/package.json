@@ -42,8 +42,6 @@
     "just-group-by": "^2.2.0",
     "nanoid": "^5.0.2",
     "patronum": "^1.20.0",
-    "pkg-dir": "^7.0.0",
-    "read-pkg-up": "^10.1.0",
     "rehype-stringify": "^10.0.0",
     "remark-gfm": "^4.0.0",
     "remark-parse": "^11.0.0",
@@ -55,11 +53,12 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.5",
-    "@rollup/plugin-url": "^8.0.2",
     "@types/async": "^3.2.22",
     "@types/node": "^18.18.7",
+    "read-pkg-up": "^11.0.0",
     "rimraf": "^5.0.5",
     "rollup": "^4.1.5",
+    "rollup-plugin-dts": "^6.1.0",
     "type-fest": "^4.6.0",
     "typescript": "^5.2.2"
   }

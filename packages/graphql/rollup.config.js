@@ -8,6 +8,22 @@ import typescriptDtsPlugin from 'rollup-plugin-dts'
 const packageJson = readPackageUpSync({ normalize: true }).packageJson
 
 export default defineConfig([{
+  input: 'src/cli.ts',
+  plugins: [
+    typescriptPlugin(),
+  ],
+  output: [{
+    file: packageJson.bin,
+    format: 'es',
+    banner: '#!/usr/bin/env node\n',
+  }],
+  external: [
+    ...Object.keys(packageJson.devDependencies ?? {}),
+    ...Object.keys(packageJson.dependencies ?? {}),
+    ...Object.keys(packageJson.peerDependencies ?? {}),
+    ...Module.builtinModules.map(m => `node:${m}`),
+  ],
+}, {
   input: 'src/index.ts',
   plugins: [
     typescriptPlugin(),
