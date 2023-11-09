@@ -1,2 +1,3 @@
-export { pneumaticsConfigSchema } from './app'
-export type { PneumaticsConfig } from './app'
+export type { Config } from './app/config'
+export { configSchema } from './app/config'
+export { Pneumatics } from './app'

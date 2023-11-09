@@ -1,53 +1,75 @@
 import path from 'node:path'
+import fs from 'node:fs/promises'
+
 import chokidar, { FSWatcher } from 'chokidar'
-import z from 'zod'
+import * as async from 'async'
 
-import { filesRaw } from '../model/files-raw'
+import { files } from '../model/files'
 
-export const pneumaticsConfigSchema = z.object({
-  path: z.string(),
-})
-
-export type PneumaticsConfig = z.infer<typeof pneumaticsConfigSchema>
+import {
+  configSchema, Config,
+  configInternalSchema, ConfigInternal,
+  configDefault,
+} from './config'
 
 export class Pneumatics {
-  private fsWatcher: FSWatcher | null = null
-  private config
+  private fsWatchers: Array<FSWatcher> | null = null
+  private config: ConfigInternal
 
-  constructor (config: PneumaticsConfig) {
-    pneumaticsConfigSchema.parse(config)
-    this.config = {
+  constructor(config: Config) {
+    configSchema.parse(config)
+    this.config = configInternalSchema.parse({
       ...config,
-      cwd: process.cwd(),
+      ...configDefault,
+    })
+  }
+
+  async start() {
+    const watchRoots = this.config.paths.map(p => (
+      path.join(this.config.cwd, p)
+    ))
+
+    watchRoots.forEach(watchRoot => {
+      const fsWatcher = chokidar.watch(watchRoot, {
+        ignoreInitial: false,
+        alwaysStat: true,
+        awaitWriteFinish: true,
+        disableGlobbing: true,
+        cwd: watchRoot,
+      })
+
+      fsWatcher.on('add', async (pathRelative, stats) => {
+        files.add({
+          pathRelative,
+          pathAbsolute: path.join(watchRoot, pathRelative),
+          pathRoot: watchRoot,
+          content: (await fs.readFile(path.join(watchRoot, pathRelative))).toString(),
+        })
+      })
+
+      fsWatcher.on('change', async (pathRelative, stats) => {
+        files.change({
+          pathRelative,
+          pathAbsolute: path.join(watchRoot, pathRelative),
+          pathRoot: watchRoot,
+          content: (await fs.readFile(path.join(watchRoot, pathRelative))).toString(),
+        })
+      })
+
+      fsWatcher.on('unlink', async (pathRelative) => {
+        files.remove(pathRelative)
+      })
+    })
+  }
+
+  watch (cb: (files: any) => void) {
+    files.list.watch(cb)
+  }
+
+  async stop() {
+    if (this.fsWatchers) {
+      await async.forEach(this.fsWatchers, async fsWatcher => await fsWatcher.close())
     }
-  }
-
-  async start () {
-    const watchRoot = path.join(this.config.cwd, this.config.path)
-
-    this.fsWatcher = chokidar.watch(watchRoot, {
-      ignoreInitial: false,
-      alwaysStat: true,
-    })
-
-    this.fsWatcher.on('add', async (pathAbsolute, stats) => {
-      const pathRelative = path.relative(watchRoot, pathAbsolute)
-      await filesRaw.add(pathRelative)
-    })
-
-    this.fsWatcher.on('change', async (pathAbsolute, stats) => {
-      const pathRelative = path.relative(watchRoot, pathAbsolute)
-      await filesRaw.change(pathRelative)
-    })
-
-    this.fsWatcher.on('unlink', async (pathAbsolute) => {
-      const pathRelative = path.relative(watchRoot, pathAbsolute)
-      filesRaw.remove(pathRelative)
-    })
-  }
-
-  async stop () {
-    await this.fsWatcher?.close()
-    this.fsWatcher = null
+    this.fsWatchers = null
   }
 }

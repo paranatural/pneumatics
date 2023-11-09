@@ -1,24 +1,31 @@
-import { combine, Store } from 'effector'
-import justGroupBy from 'just-group-by'
+import path from 'node:path'
 
-import { FileEnriched, filesEnriched } from './files-enriched'
+import { combine, Store } from 'effector'
+
+import { FileRaw, files } from './files'
 
 export interface Entity {
-  files: Array<FileEnriched>
+  files: Array<FileRaw>
 }
 
+// @ts-ignore
 export const entitiesStore: Store<Array<Entity>> = combine(
-  filesEnriched,
+  files.list,
   files => {
-    const fileGroups = Object.values(
-      justGroupBy(
-        files,
-        file => `${file.entityKind}/${file.entityId}`
-      )
-    )
+    const groups = new Map<FileRaw['pathAbsolute'], Array<FileRaw>>
 
-    return fileGroups.map(fileGroup => ({
-      files: fileGroup
-    }))
+    const jointFiles = files.filter(file => (
+      path.basename(file.pathRelative, path.extname(file.pathRelative)) === 'joint'
+    ))
+
+    const nonJointFiles = files.filter(file => (
+      path.basename(file.pathRelative, path.extname(file.pathRelative)) !== 'joint'
+    ))
+
+    nonJointFiles.forEach(file => {
+
+    })
+
+    return Array.from(groups.values())
   }
 )
