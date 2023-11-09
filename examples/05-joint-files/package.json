@@ -1,19 +1,17 @@
 {
-  "name": "@paranatural/pneumatics-example-nested-structures",
+  "name": "@paranatural/pneumatics-example-joint-files",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node --loader ts-node/esm src/index.ts"
+    "start": ""
   },
   "dependencies": {
     "@paranatural/pneumatics": "^0.0.0",
-    "effector": "^22.8.7",
-    "ts-node": "^10.9.1"
+    "effector": "^22.8.7"
   },
   "devDependencies": {
-    "@types/node": "^18.18.9",
     "typescript": "^5.2.2"
   }
 }
